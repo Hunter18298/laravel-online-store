@@ -51,6 +51,8 @@
                         </li>
                     </ul>
                 @else
+                    <a class="nav-link active" href="{{ route('myaccount.orders') }}">My Orders</a>
+
                     <form id='logout' action="{{ route('logout') }}" method="POST">
                         @csrf
                         <ul>

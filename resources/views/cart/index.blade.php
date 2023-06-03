@@ -14,6 +14,7 @@
                         <th scope="col">Name</th>
                         <th scope="col">Price</th>
                         <th scope="col">Quantity</th>
+                        <th scope="col">Delivery payment</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -23,6 +24,13 @@
                             <td>{{ $product->getName() }}</td>
                             <td>${{ $product->getPrice() }}</td>
                             <td>{{ session('products')[$product->getId()] }}</td>
+                            {{-- @if ($product->getStatus() == 1)
+                                <td> Delivery is free of charge </td>
+                            @elseif ($product->getStatus() == 0)
+                                <td> Delivery charge will be included on delivery </td>
+                            @endif --}}
+                            @if ($product->getStatus() == 1)
+                                <td> Delivery is free of charge </td>
                         </tr>
                     @endforeach
                 </tbody>

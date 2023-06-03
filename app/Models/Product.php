@@ -76,6 +76,15 @@ class Product extends Model
     {
     $this->attributes['updated_at'] = $updatedAt;
     }
+    public function getStatus()
+    {
+   return $this->attributes['status'];
+    }
+    public function setStatus($status)
+    {
+    $this->attributes['status'] = $status;
+    }
+
     public static function validate($request)
     {
         $request->validate([
@@ -83,7 +92,8 @@ class Product extends Model
         "description" => "required",
         "price" => "required|numeric|gt:0",
         'image' => 'image',
-        ]);
+        "status"=>"required|numeric",
+        ],);
     }
     public static function sumPricesByQuantity($products,$productsInSession)
     {
@@ -106,6 +116,7 @@ class Product extends Model
     {
     $this->items = $items;
     }
+ 
 
 
 }

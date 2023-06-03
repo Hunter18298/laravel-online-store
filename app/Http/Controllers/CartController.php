@@ -54,6 +54,7 @@ $item->setQuantity($quantity);
 $item->setPrice($product->getPrice());
 $item->setProductId($product->getId());
 $item->setOrderId($order->getId());
+$item->setStatus($product->getStatus());
 $item->save();
 $total = $total + ($product->getPrice()*$quantity);
 }

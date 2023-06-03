@@ -3,9 +3,11 @@
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminProductController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BrandsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\MyAccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +26,7 @@ Route::get('/products', [ProductController::class,'index'])->name("product.index
 Route::get('/products/{id}', [ProductController::class,'show'])->name("product.show");
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::post('/cart/add/{id}',[CartController::class,'add'])->name('cart.add');
+Route::get('/brands', [BrandsController::class,'index'])->name("brands.index");
 Route::middleware('auth')->group(function () {
 Route::get('/cart/purchase',[CartController::class,'purchase'])->name('cart.purchase');
 Route::get('/my-account/orders',[MyAccountController::class,'orders'])->name('myaccount.orders');

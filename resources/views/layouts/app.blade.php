@@ -21,7 +21,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="{{ route('home.index') }}">E-commerce</a>
+                <a class="navbar-brand" href="{{ route('home.index') }}">Wolves</a>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ route('home.index') }}">Home</a>
@@ -34,6 +34,10 @@
 
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ route('product.index') }}">Products</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ route('brands.index') }}">Brands</a>
 
                     </li>
                 </ul>
@@ -83,10 +87,9 @@
         <div class="copyright py-4 text-center text-white">
             <div class="container">
                 <small>
-                    Copyright - <a class="text-reset fw-bold text-decoration-none" target="_blank"
-                        href="https://twitter.com/danielgarax">
-                        Cihan university
-                    </a> - <b>Furniture Shop Project</b>
+                    Copyright - <a class="text-reset fw-bold text-decoration-none" target="_blank" href="">
+                        Wolves
+                    </a> - <b>Online Shop</b>
                 </small>
             </div>
         </div>

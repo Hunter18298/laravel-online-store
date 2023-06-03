@@ -60,6 +60,7 @@ class AdminProductController extends Controller
         $product->setName($request->input('name'));
         $product->setDescription($request->input('description'));
         $product->setPrice($request->input('price'));
+        $product->setStatus($request->input('status'));
         if ($request->hasFile('image')) {
         $imageName = $product->getId().".".$request->file('image')->extension();
         Storage::disk('public')->put(

@@ -24,6 +24,7 @@ $request->validate([
 "quantity" => "required|numeric|gt:0",
 "product_id" => "required|exists:products,id",
 "order_id" => "required|exists:orders,id",
+"status"=>"required|numeric",
 ]);
 }
 public function getId()
@@ -105,5 +106,13 @@ return $this->product;
 public function setProduct($product)
 {
 $this->product = $product;
+}
+public function getStatus()
+{
+return $this->attributes['status'] ;
+}
+public function setStatus($status)
+{
+$this->status = $status;
 }
 }
